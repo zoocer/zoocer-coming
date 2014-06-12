@@ -1,0 +1,206 @@
+@charset "UTF-8";
+
+body, html {
+  height: 100%;
+  color: #c1c1c1;
+  background: url('../images/gplaypattern.png');
+  /*background-color: #2d2d2d;
+  background-image: -webkit-gradient(radial, center center, 0, center center, 460, color-stop(0%, #2d2d2d), color-stop(100%, #232323));
+  background-image: -webkit-radial-gradient(#2d2d2d, #232323);
+  background-image: radial-gradient(  #2d2d2d, #232323);*/
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 120px;
+}
+
+.slogan {
+  width: 0;
+  margin: 0 auto;
+  padding: 2px 0 0;
+  letter-spacing: 2px;
+  font-family: 'Orbitron-Medium', monospace;
+  font-size: 48px;
+  font-weight: 300;
+  border-right: 6px solid #40d3ff;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  color: #003168;
+  line-height: 120%;
+  -webkit-animation-name: blink-start, typing, blink-end;
+  -moz-animation-name: blink-start, typing, blink-end;
+  animation-name: blink-start, typing, blink-end;
+  -webkit-animation-duration: 1s, 1s, 1s;
+  -moz-animation-duration: 1s, 1s, 1s;
+  animation-duration: 1s, 1s, 1s;
+  -webkit-animation-timing-function: linear, steps(13, end), linear;
+  -moz-animation-timing-function: linear, steps(13, end), linear;
+  animation-timing-function: linear, steps(13, end), linear;
+  -webkit-animation-iteration-count: 1, 1, infinite;
+  -moz-animation-iteration-count: 1, 1, infinite;
+  animation-iteration-count: 1, 1, infinite;
+  -webkit-animation-delay: 0s, 1s, 2s;
+  -moz-animation-delay: 0s, 1s, 2s;
+  animation-delay: 0s, 1s, 2s;
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.slogan span {
+  display: block;
+  width: 440px;
+  
+}
+
+@-webkit-keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 450px;
+  }
+}
+
+@-moz-keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 450px;
+  }
+}
+
+@-o-keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 450px;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 450px;
+  }
+}
+
+@-webkit-keyframes blink-start {
+  from, to {
+    border-color: #40d3ff;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-moz-keyframes blink-start {
+  from, to {
+    border-color: #40d3ff;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-o-keyframes blink-start {
+  from, to {
+    border-color: #40d3ff;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink-start {
+  from, to {
+    border-color: #40d3ff;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-webkit-keyframes blink-end {
+  from, to {
+    border-color: #40d3ff;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-moz-keyframes blink-end {
+  from, to {
+    border-color: #40d3ff;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@-o-keyframes blink-end {
+  from, to {
+    border-color: #40d3ff;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes blink-end {
+  from, to {
+    border-color: #40d3ff;
+  }
+
+  50% {
+    border-color: transparent;
+  }
+}
+
+/*common*/
+.text-center {
+	text-align: center;
+}
+
+/*增加LOGO*/
+.logo {
+	margin-bottom: 50px;
+}
+/*社交链接*/
+.social {
+  text-align: center;
+  /*font-size: 2.5em;*/
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  line-height: 128%;
+}
+.email-link {
+  color: #003168;
+  font-size: 14px;
+  text-decoration: none;
+}
+/*.social-link:active {
+  background-color: #ccc;
+}
+.social-link:hover {
+  background-color: #27ae60;
+}*/
