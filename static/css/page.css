@@ -10,6 +10,11 @@ body, html {
   background-image: radial-gradient(  #2d2d2d, #232323);*/
 }
 
+@font-face {
+  font-family: 'Orbitron-Medium';
+  src: url('../fonts/Orbitron-Medium.ttf');
+}
+
 .container {
   width: 100%;
   margin: 0 auto;
@@ -21,7 +26,7 @@ body, html {
   margin: 0 auto;
   padding: 2px 0 0;
   letter-spacing: 2px;
-  font-family: 'Orbitron-Medium', monospace;
+  font-family: 'Orbitron-Medium', 'Helvetica Neue';
   font-size: 48px;
   font-weight: 300;
   border-right: 6px solid #40d3ff;
@@ -52,7 +57,6 @@ body, html {
 .slogan span {
   display: block;
   width: 440px;
-  
 }
 
 @-webkit-keyframes typing {
@@ -187,7 +191,6 @@ body, html {
 /*社交链接*/
 .social {
   text-align: center;
-  /*font-size: 2.5em;*/
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -197,6 +200,7 @@ body, html {
   color: #003168;
   font-size: 14px;
   text-decoration: none;
+  font-family: 'Helvetica Neue';
 }
 /*.social-link:active {
   background-color: #ccc;
