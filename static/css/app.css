@@ -1,0 +1,174 @@
+body, html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3A3B39;
+  font-family: "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #efefef;
+  background-image: url(../images/bg.png);
+  background-position: center 40px;
+  background-repeat: no-repeat;
+  background-size: 1160px;
+  overflow: hidden;
+}
+
+.center {
+  width: 30vw;
+  height: 30vh;
+  text-align: center;
+}
+
+.logo {
+  margin-bottom: 50px;
+}
+
+.logo img {
+  width: 379px;
+}
+
+.content a {
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid #3A3B39;
+  color: #3A3B39;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.card {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.card.open {
+  display: block;
+}
+
+.card-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 99;
+  transition: all .2s cubic-bezier(.42, 0, .58, 1);
+}
+
+.card-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -200px;
+  width: 500px;
+  height: 300px;
+  padding: 30px 80px 0 200px;
+  text-align: right;
+  background-image: url(../images/card-bg.png);
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: 226px 180px;
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+  animation-fill-mode: both;
+}
+
+.slideUp {
+  animation-name: slideUp;
+  animation-duration: 460ms;
+  animation-timing-function: ease-in;
+}
+
+.fadeUpAway {
+  animation-name: fadeUpAway;
+  animation-duration: 300ms;
+  animation-timing-function: ease-out;
+}
+
+.card-content a {
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid #3A3B39;
+  color: #3A3B39;
+}
+
+@media (max-width: 1023px) {
+  .center {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 479px) {
+  .container {
+    background-image: none;
+  }
+  .center {
+    width: 100vw;
+    height: 30vh;
+  }
+  .logo img {
+    width: 80vw;
+  }
+  .card-content {
+    width: 90vw;
+    margin-left: -45vw;
+    padding-right: 40px;
+  }
+}
+
+@keyframes fadeUpAway {
+  from {
+    opacity: 1;
+    transform: none;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 70%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

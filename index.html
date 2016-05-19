@@ -6,23 +6,67 @@
 <title>ZOOCER</title>
 <meta name="description" content="zoocer,rework">
 <meta name="keywords" content="zoocer,rework">
-<link rel="shortcut icon" href="favicon.png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+<link rel="shortcut icon" href="favicon.ico">
 <!-- 引入CSS -->
-<link rel="stylesheet" type="text/css" href="static/css/normalize.css"/>
-<link rel="stylesheet" type="text/css" href="static/css/page.css"/>
+<!--<link rel="stylesheet" type="text/css" href="static/css/normalize.css"/> -->
+<link rel="stylesheet" type="text/css" href="static/css/app.css"/>
 
 </head>
 <body>
 	<div class="container">
-		<div class="logo text-center">
-			<img src="static/images/zoocer_logo_notext.png">
-		</div>
-		<div class="slogan text-center">
-			<span>COMING SOON...</span>
-		</div>
-		<div class="social">
-			<a id="email-zoocer" href="mailto:hi@zoocer.com" target="_blank" class="email-link">hi@zoocer.com</a>
+		<div class="center">
+			<div class="logo">
+				<img src="static/images/logo.png">
+			</div>
+			<div class="content">
+				<p>
+					<a href="javascript:;" class="link__contact">Contact</a>
+				</p>
+				<div class="footer">&copy; 2016 ZOOCER.</div>
+			</div>
 		</div>
 	</div>
+	<div class="card">
+		<div class="card-overlay"></div>
+		<div class="card-content">
+			<p><a href="mailto:sober@zoocer.com">Email</a></p>
+			<p><a href="https://dribbble.com/SoberZhou" target="_blank">Dribbble</a></p>
+			<p><a href="https://twitter.com/Sober62" target="_blank">Twitter</a></p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.addEventListener('DOMContentLoaded', init, false);
+		var link = document.querySelector('.link__contact');
+		var card = document.querySelector('.card');
+		var overlay = document.querySelector('.card-overlay');
+		var content = document.querySelector('.card-content');
+
+		function init() {
+			link.addEventListener('click', popUp, false);
+			overlay.addEventListener('click', hideIn, false);
+		}
+
+		function remove() {
+			card.classList.contains('open') && card.classList.remove('open');
+			content.classList.contains('fadeUpAway') && content.classList.remove('fadeUpAway');
+			content.removeEventListener('animationend', remove, false);
+		}
+
+		function hideIn(e) {
+			e.preventDefault();
+			if (content.classList.contains('slideUp')) {
+				content.classList.remove('slideUp');
+				content.classList.add('fadeUpAway');
+				content.addEventListener('animationend', remove, false);
+			}
+		}
+
+		function popUp(e) {
+			e.preventDefault();
+			!card.classList.contains('open') && card.classList.add('open');
+			!content.classList.contains('slideUp') && content.classList.add('slideUp');
+		}
+	</script>
 </body>
 </html>
